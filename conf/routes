@@ -1,0 +1,28 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+
+
+# Private API
+GET     /api/get-registration-token/:realm/:login   controllers.PrivateApiController.getRegistrationToken(realm: String, login: String)
+
+GET     /api/get-registration-qr/:realm/:login      controllers.PrivateApiController.getRegistrationQr(realm: String, login: String)
+
+# Check 2fa
+GET     /api/check/:realm/:login                    controllers.PrivateApiController.checkSecondFactor(realm: String, login: String)
+
+# Public mobile API
+# register application for second factor
+POST   /mobile/register         controllers.PublicApiController.register()
+# Confirm or reject request
+POST   /mobile/confirm          controllers.PublicApiController.confirm()
+# Test registration
+POST   /mobile/test             controllers.PublicApiController.test()
