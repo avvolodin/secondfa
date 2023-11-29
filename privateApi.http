@@ -1,3 +1,18 @@
-GET http://localhost:9000/api/check/test/login
+GET http://localhost:9000/api/get-registration-token?requestToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWFsbSI6ImFkYzQxYmViLThiMDktNGQ1OC04MmM3LWYwNmVkMzYwOGQ2NCIsImxvZ2luIjoidGVzdCIsImV4cCI6MTcwMTI1NTI0MTI4NX0._3g8Hxldem9k3tbQnj07XnJzJrlj7uLsG__Ybcur84U
 
 ###
+GET http://localhost:9000/api/get-registration-qr?requestToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWFsbSI6ImFkYzQxYmViLThiMDktNGQ1OC04MmM3LWYwNmVkMzYwOGQ2NCIsImxvZ2luIjoidGVzdCIsImV4cCI6MTcwMTI1NTI0MTI4NX0._3g8Hxldem9k3tbQnj07XnJzJrlj7uLsG__Ybcur84U
+
+
+###
+POST http://localhost:9000/mobile/register
+Content-Type: application/json
+
+{
+  "deviceToken": "fsdafasdf",
+  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFsbSI6ImFkYzQxYmViLThiMDktNGQ1OC04MmM3LWYwNmVkMzYwOGQ2NCIsImxvZ2luIjoidGVzdCIsImV4cCI6MTcwMTI1MTg2NTY3NywiaWQiOiJjMzU0ZWRiYy1kNWVhLTQxNDctOWUzZS04ZDQxOGM0ZjZiODIifQ.NIiDT-Ldj8uNCMT9FTsCnqCMeSCZy-RTUgtIvFzSQXI"
+}
+
+###
+GET http://localhost:9000/api/check?requestToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZWFsbSI6ImFkYzQxYmViLThiMDktNGQ1OC04MmM3LWYwNmVkMzYwOGQ2NCIsImxvZ2luIjoidGVzdCIsImV4cCI6MTEyMzUxNjIzOTAyMn0.EhVCSzHHK1HWvgQF_ftgwCEk29i8tpiPLkhPFpmcMjk
+

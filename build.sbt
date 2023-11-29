@@ -11,5 +11,12 @@ lazy val root = (project in file("."))
       guice,
       "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
     ),
-    libraryDependencies += "com.github.kenglxn.qrgen" % "javase" % "2.6.0"
+    libraryDependencies += ws,
+    libraryDependencies += "com.github.kenglxn.qrgen" % "javase" % "2.6.0",
+    libraryDependencies += "org.liquibase" % "liquibase-core" % "4.20.0",
+    libraryDependencies += "org.playframework" %% "play-slick" % "6.0.0",
+    libraryDependencies += "com.typesafe.play" %% "play-slick-evolutions" % "5.1.0",
+    libraryDependencies += "org.postgresql" % "postgresql" % "42.5.4",
+    libraryDependencies += "com.github.jwt-scala" %% "jwt-play-json" % "9.4.5"
+
   )
